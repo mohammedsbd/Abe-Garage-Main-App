@@ -19,6 +19,10 @@ async function Query(sql, params) {
     const [rows,fields] = await pool.execute(sql, params);
     return rows;
 }
+//export the Query function to be used in other modules
+
+module.exports = {query}
+
 
  
 
