@@ -5,6 +5,6 @@ const router = express.Router();
 //import the install controller
 const installController = require('../controllers/install.controller.js');
 //create a route to handle the install request on get
-router.get('/install', installController.installPage);
+router.get('/install', installController.install);
 //export the router module to be used in other modules
 module.exports = router;

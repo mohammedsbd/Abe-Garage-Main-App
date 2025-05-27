@@ -6,8 +6,12 @@ require('dotenv').config();
 // const db = require('./config/db.config.js');
 //import the port number from the environment variables
 const PORT = process.env.PORT;
+//import the main router module
+const router = require('./routes/index.js');
 //create web server using express
 const app = express();
+// add the route as a middleware to the express app
+app.use(router);
 //start the webserver and listen on the specified port
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

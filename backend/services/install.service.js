@@ -61,3 +61,7 @@ async function install() {
     return finalMessage;
 
 }
+//export the install function to be used in the controller
+module.exports = {
+    install, // Export the install function to be used in the controller
+};
