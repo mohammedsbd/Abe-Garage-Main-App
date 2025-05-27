@@ -2,7 +2,7 @@
 const installService = require("../services/install.service.js");
 
 // Create a function to handle the install request
-async function installPage(req, res, next) {
+async function install(req, res, next) {
   const installMessage = await installService.install();
 
   // Check if the install was successful or not by sending the appropriate status code
@@ -20,5 +20,5 @@ async function installPage(req, res, next) {
 }
 
 module.exports = {
-  installPage,
+  install, // Export the install function to be used in other modules
 };
