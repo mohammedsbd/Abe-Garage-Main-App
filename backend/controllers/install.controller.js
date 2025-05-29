@@ -1,5 +1,5 @@
 // Import the install service to handle the install logic
-const installService = require("../services/install.service.js");
+const installService = require("../services/install.service");
 
 // Create a function to handle the install request
 async function install(req, res, next) {
@@ -9,12 +9,12 @@ async function install(req, res, next) {
   if (installMessage.status == 200) {
     // If successful, send response to the client with JSON
     res.status(200).json({
-      message: installMessage.message,
+      message: installMessage
     });
   } else {
     // If not successful, send response to the client with JSON
     res.status(500).json({
-      message: installMessage.message,
+      message: installMessage
     });
   }
 }
