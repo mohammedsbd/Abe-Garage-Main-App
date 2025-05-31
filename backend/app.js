@@ -8,8 +8,29 @@ require('dotenv').config();
 const PORT = process.env.PORT;
 //import the main router module
 const router = require('./routes/index.js');
-//create web server using express
+//import the sanitizer module
+const sanitize = require('sanitize');
+//import the cors module to allow cross-origin requests
+const cors = require("cors");
+// Set up the CORS options to allow requests from our front-end
+const corsOptions = {
+  origin: process.env.FRONTEND_URL,
+  optionsSuccessStatus: 200,
+};
 const app = express();
+//use cors middleware to allow cross-origin requests
+app.use(cors(corsOptions));
+
+
+
+//use express.json() middleware to parse JSON requests
+app.use(express.json());
+//add sanitizer to the express middlware to sanitize the request body
+app.use(sanitize.middleware({
+    body: true, // sanitize request body
+    query: true, // sanitize query parameters
+    params: true, // sanitize route parameters
+}));
 // add the route as a middleware to the express app
 app.use(router);
 //start the webserver and listen on the specified port
