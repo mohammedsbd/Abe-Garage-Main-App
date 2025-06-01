@@ -4,8 +4,12 @@ const express = require('express');
 const router = express.Router();
 //import the install router
 const installRouter = require('./install.routes.js');
+//import the employee router
+const employeeRouter = require('./employee.routes.js');
 //add the install router to the main router
-router.use('/install', installRouter);
+router.use(installRouter);
+//add the employee router to the main router
+router.use(employeeRouter);
 //export the router module to be used in other modules
 
 module.exports = router;
