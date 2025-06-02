@@ -26,11 +26,7 @@ app.use(cors(corsOptions));
 //use express.json() middleware to parse JSON requests
 app.use(express.json());
 //add sanitizer to the express middlware to sanitize the request body
-app.use(sanitize.middleware({
-    body: true, // sanitize request body
-    query: true, // sanitize query parameters
-    params: true, // sanitize route parameters
-}));
+app.use(sanitize.middleware);
 // add the route as a middleware to the express app
 app.use(router);
 //start the webserver and listen on the specified port
