@@ -6,7 +6,11 @@ const router = express.Router();
 const installRouter = require('./install.routes.js');
 //import the employee router
 const employeeRouter = require('./employee.routes.js');
+//import the login router
+const loginRouter = require('./login.routes.js');
 //add the install router to the main router
+//add the login route to the main router
+router.use(loginRouter);
 router.use(installRouter);
 //add the employee router to the main router
 router.use(employeeRouter);
