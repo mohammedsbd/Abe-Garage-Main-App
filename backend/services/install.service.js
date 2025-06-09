@@ -65,3 +65,5 @@ async function install() {
 module.exports = {
     install, // Export the install function to be used in the controller
 };
+
+// This code is responsible for reading an SQL file, parsing its contents, and executing the SQL queries to create database tables.
