@@ -1,4 +1,4 @@
-import React from "react";
+
 import React, { useState } from "react";
 
 function AddEmployeeForm(props) {
@@ -16,7 +16,11 @@ function AddEmployeeForm(props) {
   const [success, setSuccess] = useState(false);
   const [serverError, setServerError] = useState("");
 
-  
+  const handleSubmit = (e) => {
+    //prevent the default behavior of the form
+    e.preventDefault();
+  }
+
   return (
     <section className="contact-section">
       <div className="auto-container">
