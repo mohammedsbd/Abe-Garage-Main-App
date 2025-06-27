@@ -9,6 +9,14 @@ function AddEmployeeForm(props) {
   const [employee_password, setPassword] = useState("");
   const [active_employee, setActive_employee] = useState(1);
   const [company_role_id, setCompany_role_id] = useState(1);
+  // Errors
+  const [emailError, setEmailError] = useState("");
+  const [firstNameRequired, setFirstNameRequired] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+  const [success, setSuccess] = useState(false);
+  const [serverError, setServerError] = useState("");
+
+  
   return (
     <section className="contact-section">
       <div className="auto-container">
