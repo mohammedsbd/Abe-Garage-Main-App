@@ -1,6 +1,14 @@
 import React from "react";
+import React, { useState } from "react";
 
 function AddEmployeeForm(props) {
+  const [employee_email, setEmail] = useState("");
+  const [employee_first_name, setFirstName] = useState("");
+  const [employee_last_name, setLastName] = useState("");
+  const [employee_phone, setPhoneNumber] = useState("");
+  const [employee_password, setPassword] = useState("");
+  const [active_employee, setActive_employee] = useState(1);
+  const [company_role_id, setCompany_role_id] = useState(1);
   return (
     <section className="contact-section">
       <div className="auto-container">
