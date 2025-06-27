@@ -5,6 +5,6 @@ const loginController = require('../controllers/login.controller');
 //create a router object
 const router = express.Router();
 //define the login route
-router.post('api/employee/login', loginController.login);
+router.post('/api/employee/login', loginController.logIn);
 //export the router
 module.exports = router;
