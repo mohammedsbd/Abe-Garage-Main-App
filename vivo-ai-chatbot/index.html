@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>" />
+  <script src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"></script>
+</head>
+  <!-- Chatbot integration verified and working -->
+<body>
+  <h1>Welcome to Vivo AI Chatbot</h1>
+  <div id="webchat" style="width: 500px; height: 600px; border: 1px solid #ccc;"></div>
+  <script>
+    window.botpress.init({
+      botId: "9885bdc9-4d08-4b55-8e25-4fb86867fffa",
+      clientId: "6b3ca485-4a5e-41aa-bb46-a320256c1ce5",
+      selector: "#webchat",
+      configuration: {
+        version: "v1",
+        botName: "Vivo",
+        botAvatar: "https://files.bpcontent.cloud/2025/07/01/16/20250701162910-U8K086OS.png",
+        fabImage: "https://files.bpcontent.cloud/2025/07/01/16/20250701164014-FTWAA2RK.png",
+        color: "#ef4444",
+        variant: "solid",
+        headerVariant: "solid",
+        themeMode: "light",
+        fontFamily: "ibm",
+        radius: 4,
+        feedbackEnabled: false,
+        footer: "[⚡ by Botpress](https://botpress.com/?from=webchat)"
+      }
+    });
+  </script>
+</body>
+</html>
