@@ -14,6 +14,7 @@ import "./assets/template-assets/css/style.css";
 import "./assets/template-assets/css/responsive.css";
 import "./assets/template-assets/css/color.css";
 import "./assets/styles/custom.css";
+import VivoChatbot from './markup/components/Chatbot/Chatbot.jsx';
 
 
 
@@ -25,6 +26,7 @@ function App() {
   return (
     <>
       <Header />
+      <VivoChatbot />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
