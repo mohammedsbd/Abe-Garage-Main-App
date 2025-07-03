@@ -12,5 +12,10 @@
 <body>
   <h1>Welcome to Vivo AI Chatbot</h1>
   <div id="webchat" style="width: 500px; height: 600px; border: 1px solid #ccc;"></div>
+  <script>
+    window.botpress.on("webchat:ready", () => {
+      window.botpress.open();
+    });
+  </script>
 </body>
 </html>
