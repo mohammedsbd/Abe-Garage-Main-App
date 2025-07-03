@@ -49,7 +49,7 @@ function Footer() {
                   </div>
                   <div className="text">
                     Call us on : <br />
-                    <strong>+ 1800 456 7890</strong>
+                    <strong>+ 251966074050</strong>
                   </div>
                 </div>
               </div>
