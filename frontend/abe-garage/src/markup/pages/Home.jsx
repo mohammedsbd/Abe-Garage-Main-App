@@ -1,19 +1,27 @@
 
 import React from "react";
 // import logo from "../../assets/images/banner.png"; // Adjust the path as necessary
+import bannerlogo from "../../assets/template-assets/images/custom/banner/banner1.jpg";
+import vban1 from "../../assets/template-assets/images/custom/misc/vban1.jpg";
+import vban2 from "../../assets/template-assets/images/custom/misc/vban2.jpg";
+import sectionImage from "../../assets/template-assets/images/custom/sectionjpg.jpg";
+
+
+
 
 const HomePage = () => {
   return (
     <>
       {/* Video Section */}
       <section className="video-section">
-        <div
-          data-parallax='{"y": 50}'
-          className="sec-bg"
-          style={{
-            backgroundImage: "url(assets/images/custom/banner/banner1.jpg)",
-          }}
-        ></div>
+      <div
+  data-parallax='{"y": 50}'
+  className="sec-bg"
+  style={{
+    backgroundImage: `url(${bannerlogo})`,
+  }}
+></div>
+
         <div className="auto-container">
           <h5>Working since 1999</h5>
           <h2>
@@ -41,8 +49,8 @@ const HomePage = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="image-box">
-                <img src="assets/images/custom/misc/vban1.jpg" alt="" />
-                <img src="assets/images/custom/misc/vban2.jpg" alt="" />
+              <img src={vban1} alt="Vehicle Banner 1" />
+              <img src={vban2} alt="Vehicle Banner 2" />
                 <div className="year-experience" data-parallax='{"y": 30}'>
                   <strong>17</strong> years <br /> Experience
                 </div>
@@ -143,9 +151,20 @@ const HomePage = () => {
               </div>
             </div>
             <div className="col-lg-6">
-              <div className="image">
-                <img src="assets/images/custom/sectionjpg.jpg" alt="" />
-              </div>
+            <div className="image">
+  <img
+    src={sectionImage}
+    alt="Section"
+    style={{
+      display: "block",
+      width: "90%",
+      objectFit: "cover",
+      marginTop: "100px", // adjust as needed
+      marginLeft:"75px"
+    }}
+  />
+</div>
+
             </div>
           </div>
         </div>
