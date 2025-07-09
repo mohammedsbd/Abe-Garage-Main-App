@@ -12,11 +12,11 @@ const VivoChatbot = () => {
         clientId: "6b3ca485-4a5e-41aa-bb46-a320256c1ce5",
         configuration: {
           version: "v1",
-          botName: "Vivo",
+          botName: "AbeBot",
           botAvatar:
-            "https://files.bpcontent.cloud/2025/07/01/16/20250701162910-U8K086OS.png",
+            "https://files.bpcontent.cloud/2025/07/09/10/20250709104706-VUIM0PHW.png",
           fabImage:
-            "https://files.bpcontent.cloud/2025/07/01/16/20250701164014-FTWAA2RK.png",
+            "https://files.bpcontent.cloud/2025/07/09/10/20250709104706-VUIM0PHW.png",
           color: "#ef4444",
           variant: "solid",
           headerVariant: "solid",
