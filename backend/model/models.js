@@ -1,14 +1,46 @@
-// models.js
-// Abe Garage Models - Basic vehicle data
+// model.js
 
-const vehicles = [
-  { id: 1, owner: "John Doe", type: "Sedan", brand: "Toyota", plate: "AB1234" },
-  { id: 2, owner: "Sarah Lee", type: "SUV", brand: "Honda", plate: "HG5678" },
-  { id: 3, owner: "Michael Chen", type: "Truck", brand: "Ford", plate: "TR9012" },
-];
+const { Sequelize, DataTypes } = require('sequelize');
 
-function getVehicleByPlate(plate) {
-  return vehicles.find(vehicle => vehicle.plate === plate);
-}
+// Connect to MySQL
+const sequelize = new Sequelize('garage_app', 'username', 'password', {
+  host: 'localhost',
+  dialect: 'mysql',
+});
 
-function
+// Define Vehicle model
+const Vehicle = sequelize.define('Vehicle', {
+  licensePlate: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    unique: true,
+  },
+  ownerName: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  vehicleType: {
+    type: DataTypes.ENUM('Car', 'Motorcycle', 'Truck', 'Other'),
+    allowNull: false,
+  },
+  entryTime: {
+    type: DataTypes.DATE,
+    defaultValue: DataTypes.NOW,
+  },
+  exitTime: {
+    type: DataTypes.DATE,
+    allowNull: true,
+  },
+  isParked: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: true,
+  },
+}, {
+  timestamps: false, // Disable createdAt and updatedAt fields
+});
+
+// Export models and sequelize instance
+module.exports = {
+  sequelize,
+  Vehicle,
+};
