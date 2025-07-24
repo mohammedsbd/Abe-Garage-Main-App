@@ -1,0 +1,111 @@
+/* General Styles */
+.state-nav-container {
+  font-family: Arial, sans-serif;
+}
+
+.state-nav-header {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #333;
+}
+
+.nav-toggle-btn {
+  color: white;
+  background-color: #444;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.state-nav {
+  display: block;
+  background-color: #333;
+  padding: 10px;
+}
+
+.state-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.state-nav a:hover {
+  background-color: #555;
+}
+
+/* Submenu */
+.submenu-item {
+  list-style-type: none;
+}
+
+.submenu-btn {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.submenu {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.submenu li a {
+  background-color: #555;
+  padding: 8px;
+}
+
+.submenu li a:hover {
+  background-color: #666;
+}
+
+/* Mobile View */
+.state-nav.mobile {
+  display: block;
+}
+
+.state-nav.mobile ul {
+  display: block;
+}
+
+.state-nav.mobile .submenu-item {
+  display: block;
+}
+
+.main-content {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+@media (max-width: 768px) {
+  .state-nav {
+    background-color: #222;
+  }
+
+  .nav-toggle-btn {
+    background-color: #444;
+  }
+
+  .submenu-btn {
+    background-color: #555;
+  }
+
+  .state-nav a {
+    padding: 15px;
+  }
+
+  .state-nav.mobile {
+    display: none;
+  }
+
+  .state-nav.mobile.active {
+    display: block;
+  }
+}
