@@ -135,7 +135,7 @@ function AddEmployeeForm(props) {
                         <option value="3">Admin</option>
                       </select>
                     </div>
-//new section
+
                     <div className="form-group col-md-12 ">
                       <input type="password" name="employee_password" value={employee_password} onChange={event => setPassword(event.target.value)} placeholder="Employee password" />
                       {passwordError && <div className="validation-error" role="alert">{passwordError}</div>}
