@@ -6,6 +6,13 @@ import Login from './markup/pages/Login.jsx';
 //import the header and footer components
 import Header from './markup/components/Header/Header.jsx';
 import Footer from './markup/components/Footer/Footer.jsx';
+import Unauthorized from "./markup/pages/Unauthotized.jsx";
+
+// Import the Orders and Customers components 
+import Orders from './markup/pages/admin/Orders.jsx';
+import Customers from './markup/pages/admin/Customers.jsx';
+// Import the Employees component 
+import Employees from './markup/pages/admin/Employees.jsx';
 
 import AddEmployee from "./markup/pages/admin/addEmployee.jsx";
 //import the css files
@@ -15,6 +22,8 @@ import "./assets/template-assets/css/responsive.css";
 import "./assets/template-assets/css/color.css";
 import "./assets/styles/custom.css";
 import VivoChatbot from './markup/components/Chatbot/Chatbot.jsx';
+// Import the PrivateAuthRoute component 
+import PrivateAuthRoute from './markup/components/Auth/PrivateAuthRoute';
 
 
 
@@ -30,7 +39,19 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/unauthorized" element={<Unauthorized />} />
+
+        <Route
+          path="/admin/orders"
+          element={
+            <PrivateAuthRoute roles={[1, 2, 3]}>
+              <Orders />
+            </PrivateAuthRoute>
+          }
+        />
+
         <Route path="/admin/add-employee" element={<AddEmployee />} />
+
         {/* Add more routes as needed */}
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
