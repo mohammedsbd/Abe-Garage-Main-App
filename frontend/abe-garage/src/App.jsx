@@ -24,6 +24,10 @@ import "./assets/styles/custom.css";
 import VivoChatbot from './markup/components/Chatbot/Chatbot.jsx';
 // Import the PrivateAuthRoute component 
 import PrivateAuthRoute from './markup/components/Auth/PrivateAuthRoute';
+import NotFoundPage from './markup/pages/404.jsx';
+
+
+
 
 
 
@@ -70,7 +74,7 @@ function App() {
         />
 
         {/* Add more routes as needed */}
-        {/* <Route path="*" element={<NotFound />} /> */}
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />
     </>
