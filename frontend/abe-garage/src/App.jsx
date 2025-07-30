@@ -8,6 +8,7 @@ import Header from './markup/components/Header/Header.jsx';
 import Footer from './markup/components/Footer/Footer.jsx';
 import Unauthorized from "./markup/pages/Unauthotized.jsx";
 import About from "./markup/pages/About.jsx";
+import Services from "./markup/pages/Services.jsx";
 
 // Import the Orders and Customers components 
 import Orders from './markup/pages/admin/Orders.jsx';
@@ -77,6 +78,7 @@ function App() {
         {/* Add more routes as needed */}
         <Route path="*" element={<NotFoundPage />} />
         <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
       </Routes>
       <Footer />
     </>
