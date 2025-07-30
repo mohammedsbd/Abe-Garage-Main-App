@@ -14,7 +14,7 @@ const VivoChatbot = () => {
           version: "v1",
           botName: "AbeBot",
           botAvatar:
-            "https://files.bpcontent.cloud/2025/07/01/16/20250701164014-FTWAA2RK.png",
+            "https://files.bpcontent.cloud/2025/07/09/10/20250709104706-VUIM0PHW.png",
           fabImage:
             "https://files.bpcontent.cloud/2025/07/09/10/20250709104706-VUIM0PHW.png",
           color: "#ef4444",
