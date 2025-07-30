@@ -4,7 +4,7 @@ import vban1 from "../../assets/images/misc/vban1.jpg";
 import vban2 from "../../assets/images/misc/vban2.jpg";
 import quality from "../../assets/images/misc/quality.jpg";
 import additional from "../../assets/images/misc/additional.jpg";
-import background from "../../assets/images/misc/1920x516.jpg";
+import background from "../../assets/images/misc/10003.png";
 
 function Home() {
   return (
@@ -268,8 +268,18 @@ function Home() {
       </section>
       <section className="video-section">
         <div data-parallax='{"y": 50}' className="sec-bg">
-          <img src={background} alt="" />
+          <img
+            src={background}
+            alt=""
+            style={{
+              width: "100%",
+              height: "auto",
+              display: "block",
+              objectFit: "cover",
+            }}
+          />
         </div>
+
         <div className="auto-container pb-5">
           <h5>Working since 1992</h5>
           <h2 style={{ color: "white-grey" }}>

@@ -10,6 +10,9 @@ import Unauthorized from "./markup/pages/Unauthotized.jsx";
 import About from "./markup/pages/About.jsx";
 import Services from "./markup/pages/Services.jsx";
 import Contact from "./markup/pages/Contact";
+import Admin from "./markup/pages/admin/Admin";
+// import TrackOrder from './markup/pages/TrackOrder.jsx';
+
 
 // Import the Orders and Customers components 
 import Orders from './markup/pages/admin/Orders.jsx';
@@ -47,6 +50,14 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/unauthorized" element={<Unauthorized />} />
+        <Route
+          path="/admin"
+          element={
+            <PrivateAuthRoute roles={[1, 2, 3]}>
+              <Admin />
+            </PrivateAuthRoute>
+          }
+        />
 
         <Route
           path="/admin/orders"
@@ -79,6 +90,7 @@ function App() {
         {/* Add more routes as needed */}
         <Route path="*" element={<NotFoundPage />} />
         <Route path="/about" element={<About />} />
+        {/* <Route path="/my-order" element={<TrackOrder />} /> */}
         <Route path="/contact" element={<Contact />} />
         <Route path="/services" element={<Services />} />
       </Routes>
