@@ -36,8 +36,26 @@ const response = await fetch("http://localhost:8000/api/employee", requestOption
 }
 
 
+const getAllEmployees = async (token) => {
+  // console.log(token);
+  const requestOptions = {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      "x-access-token": token,
+    },
+  };
+const response = await fetch(
+  "http://localhost:8000/api/employees",
+  requestOptions
+);
+  return response;
+};
+
+
 // Export all the functions 
 const employeeService = {
-  createEmployee
-}
+  createEmployee,
+  getAllEmployees,
+};
 export default employeeService; 
